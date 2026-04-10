@@ -1,4 +1,4 @@
-package Pertemuan6;
+package Pertemuan7;
 
 public class MahasiswaBerprestasi21 {
     Mahasiswa21 [] ListMhs = new Mahasiswa21[5];
@@ -88,5 +88,23 @@ public class MahasiswaBerprestasi21 {
         else {
             System.out.println("Data Mahasiswa dengan IPK " +X+ "Tidak Ditemukan");
         }
+    }
+
+    int FindBinarySearch(double Cari, int Left, int Right){
+        int Mid;
+        if (Right >= Left) {
+            Mid = (Left + Right)/2;
+
+            if (Cari == ListMhs[Mid].IPK) {
+                return (Mid);
+            }
+            else if (ListMhs[Mid].IPK > Cari) {
+                return FindBinarySearch(Cari, Left, Mid-1);
+            }
+            else {
+                return FindBinarySearch(Cari, Mid+1, Right);
+            }
+        }
+        return -1;
     }
 }

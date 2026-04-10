@@ -74,7 +74,7 @@ if (Data[j-1] > Data[j]) {
             }
 ```
 
-    - Untuk melakukan Swap atau Penukaran Nilai antara dua posisi di dalam sebuah array.
+   - Untuk melakukan Swap atau Penukaran Nilai antara dua posisi di dalam sebuah array.
 
 2. Tunjukkan kode program yang merupakan algoritma pencarian nilai minimum pada
 selection sort!

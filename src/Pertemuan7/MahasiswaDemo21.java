@@ -1,11 +1,11 @@
-package Pertemuan6;
+package Pertemuan7;
 
 import java.util.Scanner;
 
 public class MahasiswaDemo21 {
     public static void main(String[] args) {
         //MahasiswaBerprestasi21 List = new MahasiswaBerprestasi21();
-       Scanner Akbar21 = new Scanner(System.in);
+        Scanner Akbar21 = new Scanner(System.in);
         MahasiswaBerprestasi21 List = new MahasiswaBerprestasi21();
         int JmlMhs = 5;
 
@@ -69,5 +69,21 @@ public class MahasiswaDemo21 {
         int PSS = List.SequentialSearching(Cari);
         List.TampilPosisi(Cari, PSS);
         List.TampilDataSearch(Cari, PSS);
+
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("Pencarian Data");
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("Masukkan IPK Mahasiswa yang Dicari: ");
+        System.out.print("IPK: ");
+        //double cari = Akbar21.nextDouble();
+        String inputCari2 = Akbar21.nextLine().replace(",", ".");
+        double cari = Double.parseDouble(inputCari2);
+        System.out.println("-----------------------------");
+        System.out.println("  Menggunakan Binary Search");
+        System.out.println("-----------------------------");
+        double Posisi2 = List.FindBinarySearch(cari, 0, JmlMhs-1);
+        int PSS2 = (int)Posisi2;
+        List.TampilPosisi(Cari, PSS2);
+        List.TampilDataSearch(Cari, PSS2);
     }
 }

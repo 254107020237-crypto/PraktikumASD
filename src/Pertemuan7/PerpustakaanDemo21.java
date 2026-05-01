@@ -74,11 +74,11 @@ public class PerpustakaanDemo21 {
                 case 5:
                     System.out.print("Masukkan NIM: ");
                     String Cari = Akbar21.next();
-
                      boolean ketemu = false;
                     for(Peminjaman21_CM p : Pinjam){
                         if(p.MHS.NIM.equals(Cari)){
                             p.Tampil();
+                            p.tampil();
                             ketemu = true;
                         }
                     }
